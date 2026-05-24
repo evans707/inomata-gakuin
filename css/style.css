@@ -206,3 +206,86 @@ body {
     color: #999;
     margin: 0;
 }
+
+/* ==========================================================================
+   モバイル用ハンバーガーメニュー・レスポンシブ対応
+   ========================================================================== */
+
+/* ハンバーガーボタンの基本スタイル（PC画面では非表示） */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1000;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: var(--primary-color);
+    margin: 5px 0;
+    transition: all 0.3s ease;
+}
+
+/* タブレット・スマホ画面（960px以下）のヘッダー対応 */
+@media (max-width: 960px) {
+    /* ハンバーガーボタンを表示 */
+    .menu-toggle {
+        display: block;
+    }
+
+    /* ナビゲーションを初期状態では隠し、画面上部からドロップダウンさせる準備 */
+    .header-nav {
+        position: absolute;
+        top: 100%; /* ヘッダーのすぐ下に配置 */
+        left: 0;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.98);
+        border-bottom: 1px solid var(--border-color);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        
+        /* 非表示状態 */
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+        transition: all 0.3s ease;
+    }
+
+    /* JSで .is-open クラスが付与されたらメニューを表示する */
+    .header-nav.is-open {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    /* メニュー内のリストを縦並びにする */
+    .header-nav ul {
+        flex-direction: column;
+        padding: 20px 0;
+    }
+
+    .header-nav li {
+        margin: 0;
+        text-align: center;
+        padding: 16px 0;
+    }
+
+    /* PC用のホバー下線アニメーションをスマホでは無効化 */
+    .header-nav a:not(.nav-btn)::after {
+        display: none;
+    }
+
+    /* ハンバーガーボタンがクリックされたら「×」印に変形するアニメーション */
+    .menu-toggle.is-active span:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+    }
+    .menu-toggle.is-active span:nth-child(2) {
+        opacity: 0;
+    }
+    .menu-toggle.is-active span:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+    }
+}
