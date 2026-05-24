@@ -1,0 +1,357 @@
+/* ==========================================================================
+   トップページ固有スタイル
+   ========================================================================== */
+
+/* ヒーローセクション */
+.hero {
+    padding: 0;
+    margin-bottom: 90px;
+}
+
+.hero-visual {
+    position: relative;
+    background-image: url('../static/img/lesson_room.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 90vh;
+    min-height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* 画像の上の暗み。文字を見やすくします */
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: #fff;
+    padding: 0 0px;
+}
+
+.hero-catch {
+    font-size: 1.3rem;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    margin-bottom: 16px;
+    color: var(--accent-color);
+}
+
+.hero-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.4;
+    margin-bottom: 32px;
+    letter-spacing: 0.08em;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+.hero .btn-primary {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+}
+
+.hero .btn-primary:hover {
+    background-color: #fff;
+    border-color: #fff;
+    color: var(--primary-color);
+}
+
+/* 2カラム共通レイアウト構造 */
+.flex-container {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.flex-container.reverse {
+    flex-direction: row-reverse;
+}
+
+.flex-container > div {
+    flex: 1;
+}
+
+/* コンセプトセクション */
+.about-section {
+    padding: 60px 0;
+    background-color: var(--bg-main);
+}
+
+.text-lead {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--primary-color);
+    margin-bottom: 16px;
+}
+
+.about-image img,
+.teachers-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    object-fit: cover;
+}
+
+/* コースセクション */
+.courses-section {
+    padding: 60px 0;
+    background-color: var(--bg-sub);
+}
+
+/* テーブル全体のラッパー（スマホでの横スクロール崩れを防ぐ） */
+.table-wrapper {
+    max-width: 800px;
+    margin: 0 auto 40px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.02);
+    overflow: hidden;
+}
+
+/* テーブル基礎 */
+.fee-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1rem;
+    text-align: left;
+}
+
+/* 各行のスタイル（下線のみでシンプルに） */
+.fee-table tr {
+    border-bottom: 1px solid var(--border-color);
+    transition: background-color 0.3s ease;
+}
+
+.fee-table tr:last-child {
+    border-bottom: none;
+}
+
+/* 行にホバーしたときのはんなりとした背景色変化 */
+.fee-table tr:hover {
+    background-color: rgba(197, 168, 128, 0.03); /* アクセントカラーの超極薄 */
+}
+
+/* 左側：項目名（th） */
+.fee-table th {
+    width: 30%;
+    padding: 24px 32px;
+    color: var(--primary-color);
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    background-color: rgba(0, 0, 0, 0.01);
+    position: relative;
+}
+
+/* 項目名の左側にさりげないゴールドの縦線を配置 */
+.fee-table th::before {
+    content: '';
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 3px;
+    height: 16px;
+    background-color: var(--accent-color);
+    border-radius: 2px;
+}
+
+/* 右側：内容（td） */
+.fee-table td {
+    width: 70%;
+    padding: 24px 32px;
+    color: var(--text-main);
+}
+
+/* 注意書きのテキスト */
+.table-note {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    display: inline-block;
+    margin-left: 4px;
+}
+
+/* テーブル下の補足文 */
+.courses-cta {
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+/* ==========================================================================
+   モバイル対応（画面幅が狭いとき）
+   ========================================================================== */
+@media (max-width: 640px) {
+    .fee-table tr {
+        display: block;
+    }
+    
+    .fee-table th, 
+    .fee-table td {
+        display: block;
+        width: 100%;
+    }
+    
+    .fee-table th {
+        padding: 16px 20px 8px 28px;
+        background-color: transparent;
+    }
+    
+    .fee-table th::before {
+        left: 16px;
+    }
+    
+    .fee-table td {
+        padding: 0 20px 20px 28px;
+    }
+}
+
+/* 講師紹介セクション */
+.teachers-section {
+    padding: 60px 0;
+    background-color: var(--bg-main);
+}
+
+.teacher-name {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.teacher-name span {
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: var(--text-muted);
+}
+
+/* アクセスセクション */
+.access-section {
+    padding: 60px 0 140px;
+    background-color: var(--bg-sub);
+}
+
+.access-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.access-info h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.address {
+    font-size: 1.1rem;
+    margin-bottom: 4px;
+}
+
+.station-guide {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 32px;
+}
+
+.contact-box {
+    background-color: #fff;
+    padding: 32px;
+    border-radius: 6px;
+    border-left: 4px solid var(--accent-color);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+}
+
+.phone {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 4px;
+}
+
+.hours {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 20px;
+}
+
+.access-map {
+    width: 100%;
+    min-height: 350px;
+    background-color: #e5e5e5;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.map-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #888;
+    font-size: 0.9rem;
+}
+
+/* 追加された外観写真のスタイル */
+.access-image {
+    width: 100%;
+    height: 240px; /* 高さを固定。縦長の写真でも美しい長方形にトリミングされます */
+    object-fit: cover; /* 比率を保ったまま枠を埋める */
+    border-radius: 6px;
+    margin-bottom: 24px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+/* テキスト情報のまとまり */
+.access-details {
+    margin-bottom: 24px;
+}
+
+/* マップコンテナのスタイル */
+.access-map {
+    width: 100%;
+    height: 100%;
+    min-height: 450px; /* 地図が小さくなりすぎないよう最低限の高さを確保 */
+    background-color: #e5e5e5;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+/* iframeの不要な余白を消す */
+.access-map iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/* ==========================================================================
+   レスポンシブ対応 (タブレット・スマホサイズ)
+   ========================================================================== */
+@media (max-width: 960px) {
+    .flex-container, .flex-container.reverse {
+        flex-direction: column;
+        gap: 40px;
+    }
+    .courses-grid {
+        grid-template-columns: 1fr;
+    }
+    .access-grid {
+        grid-template-columns: 1fr;
+    }
+    .hero-title {
+        font-size: 1.85rem;
+    }
+}

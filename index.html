@@ -1,38 +1,154 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <!-- 基本設定 -->
     <meta charset="UTF-8">
     <meta name="description" content="はじめてでもとにかく楽しいピアノレッスン! 手を動かして脳を活性化!">
     <meta name="keyword" content="猪股学院,春日部市,音楽教室,ピアノ教室,レッスン,初心者,子供,大人">
     <title>猪股学院｜春日部市の音楽・ピアノ教室</title>
-    <!-- SEO対策 -->
     <meta name="robots" content="index, follow">
     <meta name="og:type" content="website">
     <meta name="og:title" content="猪股学院｜春日部市の音楽・ピアノ教室">
     <meta name="og:description" content="はじめてでもとにかく楽しいピアノレッスン! 手を動かして脳を活性化!">
-    <!-- レスポンシブ対応設定 -->
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
-    <!-- css -->
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/index.css">
 </head>
 <body>
-    <header>
-        <h1 class="site-title">猪股学院｜春日部市の音楽・ピアノ教室</h1>
-        <nav class="header-nav">
-            <ul class="header-nav">
-                <li><a href="#">ホーム</a></li>
-                <li><a href="#">レッスン内容</a></li>
-                <li><a href="#">講師紹介</a></li>
-                <li><a href="#">アクセス</a></li>
-                <li><a href="#">お問い合わせ</a></li>
-            </ul>
-        </nav>
+    <header class="site-header">
+        <div class="header-container">
+            <h1 class="site-title">
+                <a href="#">猪股学院</a>
+                <span class="site-subtitle">春日部市の音楽・ピアノ教室</span>
+            </h1>
+            <nav class="header-nav">
+                <ul>
+                    <li><a href="#" class="active">ホーム</a></li>
+                    <li><a href="#about">ピアノを学ぶということ</a></li>
+                    <li><a href="#courses">料金概要</a></li>
+                    <!-- <li><a href="#teachers">講師紹介</a></li> -->
+                    <li><a href="#access">アクセス</a></li>
+                    <li><a href="#contact" class="nav-btn">お問い合わせ</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-    <main></main>
-    <footer></footer>
+    
+    <main class="site-main">
+        <section class="hero">
+            <div class="hero-visual">
+                <div class="hero-overlay"></div>
+                <div class="hero-content">
+                    <p class="hero-catch">無料体験レッスン受付中!</p>
+                    <h2 class="hero-title">初めてでもとにかく楽しい!<br>ピアノレッスン</h2>
+                    <a href="#contact" class="btn btn-primary">無料体験レッスンを申し込む</a>
+                </div>
+            </div>
+        </section>
+        
+        <section id="about" class="about-section">
+            <div class="container flex-container">
+                <div class="about-text">
+                    <span class="section-tag">ピアノを学ぶということ</span>
+                    <h2 class="section-title">音楽を楽しみながら、<br>脳全体を活性化させる。</h2>
+                    <p class="text-lead">
+                        絶対音感を身につけるには4〜8歳がいいと言われています。
+                        この時期に音楽にたくさん触れることで聴覚は刺激され、絶対音感が身についてきます。
+                        また、ピアノを弾くと頭が良くなるとも言われてます。
+                        ピアノが上手な子の脳はワーキングメモリーという機能が発達し、
+                        演奏時に両手をコントロールするので脳全体が、活性化するそうです。
+                        当教室ではお子様一人一人に合わせたレッスンを行っております。
+                    </p>
+                </div>
+                <div class="about-image">
+                    <img src="./static/img/piano.jpg" alt="ピアノレッスンの様子">
+                </div>
+            </div>
+        </section>
+        
+        <section id="courses" class="courses-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">料金概要</span>
+                    <h2 class="section-title">レッスン内容・料金</h2>
+                </div>
+                
+                <div class="table-wrapper">
+                    <table class="fee-table">
+                        <tbody>
+                            <tr>
+                                <th>対応楽器</th>
+                                <td>ピアノ、マリンバ</td>
+                            </tr>
+                            <tr>
+                                <th>レッスン時間</th>
+                                <td>30分 / 45分</td>
+                            </tr>
+                            <tr>
+                                <th>レッスン料金</th>
+                                <td>月謝制 5,200円〜 <span class="table-note">（教材費別途）</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="courses-cta">
+                    <p>※レッスンスケジュールや回数、詳細な料金プランについてはお気軽にお問い合わせください。</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- <section id="teachers" class="teachers-section">
+            <div class="container flex-container reverse">
+                <div class="teachers-image">
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80" alt="講師 猪股先生">
+                </div>
+                <div class="teachers-text">
+                    <span class="section-tag">Instructor</span>
+                    <h2 class="section-title">講師紹介</h2>
+                    <h3 class="teacher-name">猪股 先生 <span>/ ピアノ講師</span></h3>
+                    <p class="teacher-bio">
+                        音楽大学ピアノ科卒業後、演奏活動を経て春日部市に音楽教室を開塾。指導歴20年以上。<br>
+                        「とにかく楽しく、笑顔で帰れるレッスン」をモットーに、これまでに多くの子どもたちや大人の方に音楽の魅力を伝えてきました。丁寧で優しい指導が好評を得ています。
+                    </p>
+                </div>
+            </div>
+        </section> -->
+        
+        <section id="access" class="access-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">アクセス</span>
+                    <h2 class="section-title">アクセス・お問い合わせ</h2>
+                </div>
+                <div class="access-grid">
+                    <div class="access-info">
+                        <img src="./static/img/lesson_house.png" alt="教室外観" class="access-image">
+                        <h3>猪股学院</h3>
+                        <p class="address">〒344-0067 埼玉県春日部市大沼5-43-6</p>
+                        <p class="station-guide">※春日部市立上沖小学校西門そば</p>
+                        <div class="" id="contact">
+                            <p class="phone">TEL: 090-6548-1526</p>
+                            <a href="mailto:info@example.com" class="btn btn-secondary">メールでお問い合わせ</a>
+                        </div>
+                    </div>
+                    <div class="access-map">
+                        <div class="map-placeholder">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6458.494023521635!2d139.7557793!3d35.965385999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018beb9c5263699%3A0xedc21616b8a9d21a!2z44CSMzQ0LTAwMzgg5Z-8546J55yM5pil5pel6YOo5biC5aSn5rK877yV5LiB55uu77yU77yT4oiS77yW!5e0!3m2!1sja!2sjp!4v1779643141617!5m2!1sja!2sjp" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <p class="footer-brand">猪股学院</p>
+            <p class="footer-copy">&copy; 2026 猪股学院 All Rights Reserved.</p>
+        </div>
+    </footer>
+
     <script src="./js/index.js" type="text/javascript"></script>
 </body>
 </html>
