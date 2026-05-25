@@ -1,3 +1,11 @@
+.section-tag {
+    margin-bottom: 8px;
+}
+
+.section-title {
+    margin-bottom: 16px;
+}
+
 /* ==========================================================================
    トップページ固有スタイル
    ========================================================================== */
@@ -5,7 +13,7 @@
 /* ヒーローセクション */
 .hero {
     padding: 0;
-    margin-bottom: 90px;
+    margin-bottom: 32px;
 }
 
 .hero-visual {
@@ -13,8 +21,8 @@
     background-image: url('../static/img/lesson_room.jpg');
     background-size: cover;
     background-position: center;
-    height: 90vh;
-    min-height: 450px;
+    width: 100%;
+    height: calc(100vh - 80px);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -35,7 +43,7 @@
     z-index: 2;
     text-align: center;
     color: #fff;
-    padding: 0 0px;
+    padding: 0 0 104px;
 }
 
 .hero-catch {
@@ -50,7 +58,7 @@
     font-size: 2.5rem;
     font-weight: 700;
     line-height: 1.4;
-    margin-bottom: 32px;
+    margin-bottom: 16px;
     letter-spacing: 0.08em;
     text-shadow: 0 2px 10px rgba(0,0,0,0.3);
 }
@@ -66,11 +74,10 @@
     color: var(--primary-color);
 }
 
-/* 2カラム共通レイアウト構造 */
 .flex-container {
     display: flex;
     align-items: center;
-    gap: 60px;
+    gap: 16px;
 }
 
 .flex-container.reverse {
@@ -83,15 +90,14 @@
 
 /* コンセプトセクション */
 .about-section {
-    padding: 60px 0;
     background-color: var(--bg-main);
+    margin-bottom: 32px;
 }
 
 .text-lead {
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: 500;
     color: var(--primary-color);
-    margin-bottom: 16px;
 }
 
 .about-image img,
@@ -105,14 +111,13 @@
 
 /* コースセクション */
 .courses-section {
-    padding: 60px 0;
     background-color: var(--bg-sub);
+    margin-bottom: 32px;
 }
 
 /* テーブル全体のラッパー（スマホでの横スクロール崩れを防ぐ） */
 .table-wrapper {
-    max-width: 800px;
-    margin: 0 auto 40px;
+    margin-bottom: 16px;
     background-color: #ffffff;
     border-radius: 8px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.02);
@@ -203,16 +208,12 @@
     }
     
     .fee-table th {
-        padding: 16px 20px 8px 28px;
+        padding: 8px 24px;
         background-color: transparent;
     }
     
-    .fee-table th::before {
-        left: 16px;
-    }
-    
     .fee-table td {
-        padding: 0 20px 20px 28px;
+        padding: 0 24px 16px;
     }
 }
 
@@ -236,15 +237,14 @@
 
 /* アクセスセクション */
 .access-section {
-    padding: 60px 0 140px;
     background-color: var(--bg-sub);
+    margin-bottom: 32px;
 }
 
 .access-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    margin-top: 40px;
+    gap: 16px;
 }
 
 .access-info h3 {
@@ -254,14 +254,14 @@
 }
 
 .address {
-    font-size: 1.1rem;
-    margin-bottom: 4px;
+    font-size: 1rem;
+    margin-bottom: 8px;
 }
 
 .station-guide {
-    font-size: 0.85rem;
+    font-size: 1rem;
     color: var(--text-muted);
-    margin-bottom: 32px;
+    margin-bottom: 16px;
 }
 
 .contact-box {
@@ -277,7 +277,7 @@
     font-size: 1.6rem;
     font-weight: 700;
     color: var(--primary-color);
-    margin-bottom: 4px;
+    margin-bottom: 8px;
 }
 
 .hours {
@@ -310,7 +310,7 @@
     height: 240px; /* 高さを固定。縦長の写真でも美しい長方形にトリミングされます */
     object-fit: cover; /* 比率を保ったまま枠を埋める */
     border-radius: 6px;
-    margin-bottom: 24px;
+    margin-bottom: 16px;
     box-shadow: 0 4px 20px rgba(0,0,0,0.05);
 }
 
@@ -343,7 +343,7 @@
 @media (max-width: 960px) {
     .flex-container, .flex-container.reverse {
         flex-direction: column;
-        gap: 40px;
+        gap: 16px;
     }
     .courses-grid {
         grid-template-columns: 1fr;
@@ -352,6 +352,9 @@
         grid-template-columns: 1fr;
     }
     .hero-title {
-        font-size: 1.85rem;
+        font-size: 1.6rem;
+    }
+    .section-title {
+        font-size: 1.7rem;
     }
 }

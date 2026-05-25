@@ -2,13 +2,13 @@
 
 /* デザインシステム・変数定義 */
 :root {
-    --primary-color: #111111;    /* ピアノの美しい黒 */
-    --accent-color: #c5a880;     /* 上品なシャンパンゴールド */
+    --primary-color: #111111;    
+    --accent-color: #c5a880;    
     --accent-hover: #b3946b;
-    --text-main: #333333;        /* 本文テキスト */
-    --text-muted: #666666;       /* 補助テキスト */
-    --bg-main: #ffffff;
-    --bg-sub: #faf8f5;           /* ほんのり温かみのあるオフホワイト */
+    --text-main: #333333;      
+    --text-muted: #666666;  
+    --bg-main: #f2f2f2;
+    --bg-sub: #f2f2f2;         
     --border-color: #e5e5e5;
     
     --font-base: 'Noto Sans JP', 'Roboto', sans-serif;
@@ -134,8 +134,8 @@ body {
 .btn {
     display: inline-block;
     text-decoration: none;
-    padding: 14px 36px;
-    font-size: 0.95rem;
+    padding: 16px 32px;
+    font-size: 1rem;
     font-weight: 500;
     border-radius: 4px;
     transition: all 0.3s ease;
